@@ -1,0 +1,48 @@
+// COLOR VARIABLES
+$color-green: hsl(163, 72%, 41%);
+$color-red: hsl(356, 69%, 56%);
+
+$color-facebook: hsl(208, 92%, 53%);
+$color-twitter: hsl(203, 89%, 53%);
+$color-instagram: linear-gradient(to top right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$color-youtube: hsl(348, 97%, 39%);
+
+// FONT VARIABLES
+$font-family: 'Inter', sans-serif;
+
+// FONT SIZE
+$default-font-size: 1.4rem;
+
+// GLOBAL
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; //1rem = 10px
+}
+
+// DARK THEME COLORS
+body[data-theme="dark"] {
+    $color-toggle: linear-gradient(to top right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+    $color-bg: hsl(230, 17%, 14%);
+    $color-top-bg-pattern: hsl(232, 19%, 15%);
+    $color-card-bg: hsl(228, 28%, 20%);
+    $color-text-1: hsl(228, 34%, 66%);
+    $color-text-2: hsl(0, 0%, 100%);
+}
+
+// LIGHT THEME COLORS
+body[data-theme="light"] {
+    $color-toggle: hsl(230, 22%, 74%);
+    $color-bg: hsl(0, 0%, 100%);
+    $color-top-bg-pattern: hsl(225, 100%, 98%);
+    $color-card-bg: hsl(227, 47%, 96%);
+    $color-text-1: hsl(228, 12%, 44%);
+    $color-text-2: hsl(230, 17%, 14%);
+}
