@@ -1,0 +1,300 @@
+body {
+    width: 100%;
+    min-width: 260px;
+    min-height: 100vh;
+    font-family: $font-family;
+    font-size: $default-font-size;
+    font-weight: 700;
+    background-color: var(--color-bg);
+    color: var(--color-text-1);
+    @extend %center-vertically;
+    flex-direction: column;
+    justify-content: center;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 23.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--color-top-bg-pattern);
+        border-radius: 0 0 12px 12px;
+        z-index: -1;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 1210px;
+    padding: 3.5rem 2.45rem;
+
+    @media only screen and (min-width: 900px) {
+        padding: 3.8rem 5rem;
+    }
+}
+
+// HEADER
+.header {
+    margin-bottom: 4rem;
+
+    @media only screen and (min-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__heading-primary {
+        color: var(--color-text-2);
+        font-size: 2.4rem;
+        margin-bottom: .5rem;
+
+        @media only screen and (min-width: 1200px) {
+            font-size: 2.8rem;
+        }
+    }
+
+    hr {
+        border: 1px solid var(--color-hr);
+        margin: 2rem 0;
+
+        @media only screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &__toggle {
+        @extend %center-vertically;
+        justify-content: space-between;
+    }
+
+    &__switch {
+        position: relative;
+
+        @media only screen and (min-width: 768px) {
+            margin-left: 1.5rem;
+        }
+
+        // Hidden checkbox
+        input {
+            width: 0;
+            height: 0;
+            display: none;
+            visibility: hidden;
+        }
+
+        // Pill-shaped part of toggle switch
+        label {
+            cursor: pointer;
+            display: block;
+            text-indent: -9999px;
+            height: 24px;
+            width: 48px;
+            border-radius: 50px;
+            background-image: var(--color-toggle);
+            transition: all .3s;
+        }
+
+        // Ball of toggle switch
+        label::after {
+            position: absolute;
+            content: '';
+            width: 18px;
+            height: 18px;
+            border-radius: 50px;
+            top: 3px;
+            left: 3px;
+            background-color: var(--color-card-bg);
+            transition: left .3s;
+        }
+
+        // Move toggle switch ball right
+        input:checked + label::after {
+            left: calc(100% - 22px);
+        }
+
+        label:hover {
+            background-image: $color-gradient;
+        }
+    }
+}
+
+// LARGE CARDS SECTION
+.overall {
+    @extend %card-grid;
+    grid-gap: 2rem;
+    margin-bottom: 4.5rem;
+
+    &__card {
+        @extend %card-styles;
+        font-size: 1.2rem;
+        text-align: center;
+        padding: 3rem;
+        @extend %center-vertically;
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+        transition: background-color .3s ease, transform .3s ease;
+    }
+
+    // Colored bar at top of large cards
+    &__card::before {
+        content: '';
+        width: 100%;
+        height: 4px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &__card:first-child::before {
+        background-color: $color-facebook;
+    }
+
+    &__card:nth-child(2)::before {
+        background-color: $color-twitter;
+    }
+
+    &__card:nth-child(3)::before {
+        background-image: $color-instagram;
+    }
+
+    &__card:last-child::before {
+        background-color: $color-youtube;
+    }
+
+    &__card:hover {
+        @include card-hover;
+    }
+
+    &__platform {
+        @extend %center-vertically;
+        margin-bottom: 2rem;
+    }
+
+    &__username {
+        margin-left: 1rem;
+    }
+
+    &__followers {
+        font-size: 5.6rem;
+        color: var(--color-text-2);
+    }
+
+    &__unit {
+        text-transform: uppercase;
+        font-weight: 400;
+        letter-spacing: 5px;
+        margin-bottom: 2.2rem;
+    }
+
+    &__today {
+        @extend %center-vertically;
+    }
+
+    &__today--green {
+        color: $color-green;
+    }
+
+    &__today--red {
+        color: $color-red;
+    }
+
+    &__today-count {
+        margin-left: .5rem;
+    }
+}
+
+// SMALL CARDS SECTION
+.today {
+    &__heading-secondary {
+        font-size: 2.4rem;
+        color: var(--color-text-overview-today);
+        margin-bottom: 2.7rem;
+    }
+
+    &__container {
+        @extend %card-grid;
+        grid-gap: 1.6rem;
+    }
+
+    &__card {
+        @extend %card-styles;
+        padding: 2.5rem;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        row-gap: 3rem;
+        align-items: end;
+        justify-content: space-between;
+        transition: background-color .3s ease, transform .3s ease;
+    }
+
+    &__card:hover {
+        @include card-hover;
+    }
+
+    &__heading-tertiary {
+        font-size: 1.4rem;
+        line-height: .8;
+    }
+
+    &__social-icon {
+        justify-self: end;
+    }
+
+    &__count {
+        font-size: 3.2rem;
+        line-height: .8;
+        color: var(--color-text-2);
+    }
+
+    &__percentage {
+        @extend %center-vertically;
+    }
+
+    &__percentage--green {
+        color: $color-green;
+    }
+
+    &__percentage--red {
+        color: $color-red;
+    }
+
+    &__percentage-num {
+        margin-left: .5rem;
+    }
+}
+
+// ATTRIBUTION
+.attribution {
+    color: var(--color-text-1);
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.6rem;
+    text-align: center;
+    padding: 1rem 2.4rem;
+
+    a {
+        display: inline-block;
+        background-image: $color-gradient;
+        -webkit-background-clip: text;
+        color: transparent;
+        text-decoration: none;
+        position: relative;
+    }
+
+    a::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-image: $color-gradient;
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform .3s;
+    }
+
+    a:hover::after {
+        transform: scaleX(1);
+    }
+}

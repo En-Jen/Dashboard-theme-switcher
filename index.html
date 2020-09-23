@@ -10,192 +10,182 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Social Media Dashboard</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body data-theme="dark">
-  <header class="header">
-    <div class="header__title">
-      <h1 class="header__heading-primary">Social Media Dashboard</h1>
-      <h4 class="header__heading-quaternary">Total Followers: 23,004</h4>
-    </div>
-    <hr>
-    <div class="header__toggle">
-      <p class="header__mode">Dark Mode</p>
-      <div class="header__switch">
-        <input type="checkbox" id="switcher">
-        <label for="switcher">Switch</label>
+  <div class="container">
+    <header class="header">
+      <div class="header__title">
+        <h1 class="header__heading-primary">Social Media Dashboard</h1>
+        <h4 class="header__heading-quaternary">Total Followers: 23,004</h4>
       </div>
-    </div>
-  </header>
-
-  <main>
-    <!-- LARGE CARDS -->
-    <div class="overall">
-      <!-- FACEBOOK -->
-      <div class="overall__card">
-        <div class="overall__platform">
-          <img src="./images/icon-facebook.svg" alt="Facebook icon" class="overall__social-icon social-icon">
-          <p class="overall__username">@nathanf</p>
+      <hr>
+      <div class="header__toggle">
+        <p class="header__mode">Dark Mode</p>
+        <div class="header__switch">
+          <input type="checkbox" id="switcher">
+          <label for="switcher">Switch</label>
         </div>
-        <div class="overall__followers">
-          <p class="overall__number">1987</p>
+      </div>
+    </header>
+  
+    <main>
+      <!-- LARGE CARDS -->
+      <div class="overall">
+        <!-- FACEBOOK -->
+        <div class="overall__card">
+          <div class="overall__platform">
+            <img src="./images/icon-facebook.svg" alt="Facebook icon">
+            <p class="overall__username">@nathanf</p>
+          </div>
+          <p class="overall__followers">1987</p>
           <p class="overall__unit">Followers</p>
+          <div class="overall__today overall__today--green">
+            <img src="./images/icon-up.svg" alt="Up icon">
+            <p class="overall__today-count">12 Today</p>
+          </div>
         </div>
-        <div class="overall__today overall__today--green">
-          <img src="./images/icon-up.svg" alt="Up icon" class="overall__arrow-icon arrow-icon">
-          <p class="overall__today-count">12 Today</p>
-        </div>
-      </div>
-
-      <!-- TWITTER -->
-      <div class="overall__card">
-        <div class="overall__platform">
-          <img src="./images/icon-twitter.svg" alt="Twitter icon" class="overall__social-icon social-icon">
-          <p class="overall__username">@nathanf</p>
-        </div>
-        <div class="overall__followers">
-          <p class="overall__number">1044</p>
+  
+        <!-- TWITTER -->
+        <div class="overall__card">
+          <div class="overall__platform">
+            <img src="./images/icon-twitter.svg" alt="Twitter icon">
+            <p class="overall__username">@nathanf</p>
+          </div>
+          <p class="overall__followers">1044</p>
           <p class="overall__unit">Followers</p>
+          <div class="overall__today overall__today--green">
+            <img src="./images/icon-up.svg" alt="Up icon">
+            <p class="overall__today-count">99 Today</p>
+          </div>
         </div>
-        <div class="overall__today overall__today--green">
-          <img src="./images/icon-up.svg" alt="Up icon" class="overall__arrow-icon arrow-icon">
-          <p class="overall__today-count">99 Today</p>
-        </div>
-      </div>
-
-      <!-- INSTAGRAM -->
-      <div class="overall__card">
-        <div class="overall__platform">
-          <img src="./images/icon-instagram.svg" alt="Instagram icon" class="overall__social-icon social-icon">
-          <p class="overall__username">@realnathanf</p>
-        </div>
-        <div class="overall__followers">
-          <p class="overall__number">11k</p>
+  
+        <!-- INSTAGRAM -->
+        <div class="overall__card">
+          <div class="overall__platform">
+            <img src="./images/icon-instagram.svg" alt="Instagram icon">
+            <p class="overall__username">@realnathanf</p>
+          </div>
+          <p class="overall__followers">11k</p>
           <p class="overall__unit">Followers</p>
+          <div class="overall__today overall__today--green">
+            <img src="./images/icon-up.svg" alt="Up icon">
+            <p class="overall__today-count">1099 Today</p>
+          </div>
         </div>
-        <div class="overall__today overall__today--green">
-          <img src="./images/icon-up.svg" alt="Up icon" class="overall__arrow-icon arrow-icon">
-          <p class="overall__today-count">1099 Today</p>
-        </div>
-      </div>
-
-      <!-- YOUTUBE -->
-      <div class="overall__card">
-        <div class="overall__platform">
-          <img src="./images/icon-youtube.svg" alt="Youtube icon" class="overall__social-icon social-icon">
-          <p class="overall__username">Nathan F.</p>
-        </div>
-        <div class="overall__followers">
-          <p class="overall__number">8239</p>
+  
+        <!-- YOUTUBE -->
+        <div class="overall__card">
+          <div class="overall__platform">
+            <img src="./images/icon-youtube.svg" alt="Youtube icon">
+            <p class="overall__username">Nathan F.</p>
+          </div>
+          <p class="overall__followers">8239</p>
           <p class="overall__unit">Subscribers</p>
-        </div>
-        <div class="overall__today overall__today--red">
-          <img src="./images/icon-down.svg" alt="Down icon" class="overall__arrow-icon arrow-icon">
-          <p class="overall__today-count">144 Today</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- TODAY SECTION -->
-    <div class="today">
-      <h2 class="today__heading-secondary">Overview - Today</h2>
-      <!-- SMALL CARDS -->
-      <div class="today__container">
-        <!-- FB VIEWS -->
-        <div class="today__card">
-          <h3 class="today__heading-tertiary">Page Views</h3>
-          <img src="./images/icon-facebook.svg" alt="Facebook icon" class="social-icon">
-          <p class="today__count">87</p>
-          <div class="today__percentage today__percentage--green">
-            <img src="./images/icon-up.svg" alt="Up icon" class="arrow-icon">
-            <p class="today__percentage-num">3%</p>
-          </div>
-        </div>
-
-        <!-- FB LIKES -->
-        <div class="today__card">
-          <h3 class="today__heading-tertiary">Likes</h3>
-          <img src="./images/icon-facebook.svg" alt="Facebook icon" class="social-icon">
-          <p class="today__count">52</p>
-          <div class="today__percentage today__percentage--red">
-            <img src="./images/icon-down.svg" alt="Down icon" class="arrow-icon">
-            <p class="today__percentage-num">2%</p>
-          </div>
-        </div>
-
-        <!-- IG LIKES -->
-        <div class="today__card">
-          <h3 class="today__heading-tertiary">Likes</h3>
-          <img src="./images/icon-instagram.svg" alt="Instagram icon" class="social-icon">
-          <p class="today__count">5462</p>
-          <div class="today__percentage today__percentage--green">
-            <img src="./images/icon-up.svg" alt="Up icon" class="arrow-icon">
-            <p class="today__percentage-num">2257%</p>
-          </div>
-        </div>
-
-        <!-- IG VIEWS -->
-        <div class="today__card">
-          <h3 class="today__heading-tertiary">Profile Views</h3>
-          <img src="./images/icon-instagram.svg" alt="Instagram icon" class="social-icon">
-          <p class="today__count">52k</p>
-          <div class="today__percentage today__percentage--green">
-            <img src="./images/icon-up.svg" alt="Up icon" class="arrow-icon">
-            <p class="today__percentage-num">1375%</p>
-          </div>
-        </div>
-
-        <!-- TWITTER RETWEETS -->
-        <div class="today__card">
-          <h3 class="today__heading-tertiary">Retweets</h3>
-          <img src="./images/icon-twitter.svg" alt="Twitter icon" class="social-icon">
-          <p class="today__count">117</p>
-          <div class="today__percentage today__percentage--green">
-            <img src="./images/icon-up.svg" alt="Up icon" class="arrow-icon">
-            <p class="today__percentage-num">303%</p>
-          </div>
-        </div>
-
-        <!-- TWITTER LIKES -->
-        <div class="today__card">
-          <h3 class="today__heading-tertiary">Likes</h3>
-          <img src="./images/icon-twitter.svg" alt="Twitter icon" class="social-icon">
-          <p class="today__count">507</p>
-          <div class="today__percentage today__percentage--green">
-            <img src="./images/icon-up.svg" alt="Up icon" class="arrow-icon">
-            <p class="today__percentage-num">553%</p>
-          </div>
-        </div>
-
-        <!-- YOUTUBE LIKES -->
-        <div class="today__card">
-          <h3 class="today__heading-tertiary">Likes</h3>
-          <img src="./images/icon-youtube.svg" alt="Youtube icon" class="social-icon">
-          <p class="today__count">107</p>
-          <div class="today__percentage today__percentage--red">
-            <img src="./images/icon-down.svg" alt="Down icon" class="arrow-icon">
-            <p class="today__percentage-num">19%</p>
-          </div>
-        </div>
-
-        <!-- YOUTUBE VIEWS -->
-        <div class="today__card">
-          <h3 class="today__heading-tertiary">Total Views</h3>
-          <img src="./images/icon-youtube.svg" alt="Youtube icon" class="social-icon">
-          <p class="today__count">1407</p>
-          <div class="today__percentage today__percentage--red">
-            <img src="./images/icon-down.svg" alt="Down icon" class="arrow-icon">
-            <p class="today__percentage-num">12%</p>
+          <div class="overall__today overall__today--red">
+            <img src="./images/icon-down.svg" alt="Down icon">
+            <p class="overall__today-count">144 Today</p>
           </div>
         </div>
       </div>
-    </div>
-  </main>
+  
+      <!-- TODAY SECTION -->
+      <div class="today">
+        <h2 class="today__heading-secondary">Overview - Today</h2>
+        <!-- SMALL CARDS -->
+        <div class="today__container">
+          <!-- FB VIEWS -->
+          <div class="today__card">
+            <h3 class="today__heading-tertiary">Page Views</h3>
+            <img src="./images/icon-facebook.svg" alt="Facebook icon" class="today__social-icon">
+            <p class="today__count">87</p>
+            <div class="today__percentage today__percentage--green">
+              <img src="./images/icon-up.svg" alt="Up icon">
+              <p class="today__percentage-num">3%</p>
+            </div>
+          </div>
+  
+          <!-- FB LIKES -->
+          <div class="today__card">
+            <h3 class="today__heading-tertiary">Likes</h3>
+            <img src="./images/icon-facebook.svg" alt="Facebook icon" class="today__social-icon">
+            <p class="today__count">52</p>
+            <div class="today__percentage today__percentage--red">
+              <img src="./images/icon-down.svg" alt="Down icon">
+              <p class="today__percentage-num">2%</p>
+            </div>
+          </div>
+  
+          <!-- IG LIKES -->
+          <div class="today__card">
+            <h3 class="today__heading-tertiary">Likes</h3>
+            <img src="./images/icon-instagram.svg" alt="Instagram icon" class="today__social-icon">
+            <p class="today__count">5462</p>
+            <div class="today__percentage today__percentage--green">
+              <img src="./images/icon-up.svg" alt="Up icon">
+              <p class="today__percentage-num">2257%</p>
+            </div>
+          </div>
+  
+          <!-- IG VIEWS -->
+          <div class="today__card">
+            <h3 class="today__heading-tertiary">Profile Views</h3>
+            <img src="./images/icon-instagram.svg" alt="Instagram icon" class="today__social-icon">
+            <p class="today__count">52k</p>
+            <div class="today__percentage today__percentage--green">
+              <img src="./images/icon-up.svg" alt="Up icon">
+              <p class="today__percentage-num">1375%</p>
+            </div>
+          </div>
+  
+          <!-- TWITTER RETWEETS -->
+          <div class="today__card">
+            <h3 class="today__heading-tertiary">Retweets</h3>
+            <img src="./images/icon-twitter.svg" alt="Twitter icon" class="today__social-icon">
+            <p class="today__count">117</p>
+            <div class="today__percentage today__percentage--green">
+              <img src="./images/icon-up.svg" alt="Up icon">
+              <p class="today__percentage-num">303%</p>
+            </div>
+          </div>
+  
+          <!-- TWITTER LIKES -->
+          <div class="today__card">
+            <h3 class="today__heading-tertiary">Likes</h3>
+            <img src="./images/icon-twitter.svg" alt="Twitter icon" class="today__social-icon">
+            <p class="today__count">507</p>
+            <div class="today__percentage today__percentage--green">
+              <img src="./images/icon-up.svg" alt="Up icon">
+              <p class="today__percentage-num">553%</p>
+            </div>
+          </div>
+  
+          <!-- YOUTUBE LIKES -->
+          <div class="today__card">
+            <h3 class="today__heading-tertiary">Likes</h3>
+            <img src="./images/icon-youtube.svg" alt="Youtube icon" class="today__social-icon">
+            <p class="today__count">107</p>
+            <div class="today__percentage today__percentage--red">
+              <img src="./images/icon-down.svg" alt="Down icon">
+              <p class="today__percentage-num">19%</p>
+            </div>
+          </div>
+  
+          <!-- YOUTUBE VIEWS -->
+          <div class="today__card">
+            <h3 class="today__heading-tertiary">Total Views</h3>
+            <img src="./images/icon-youtube.svg" alt="Youtube icon" class="today__social-icon">
+            <p class="today__count">1407</p>
+            <div class="today__percentage today__percentage--red">
+              <img src="./images/icon-down.svg" alt="Down icon">
+              <p class="today__percentage-num">12%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
